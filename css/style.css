@@ -9,3 +9,7 @@ input.checkbox  {
 input.date {
     width: 12em;;
 }
+.fa-plus {
+    background-color:white;
+    color:blue;
+}
