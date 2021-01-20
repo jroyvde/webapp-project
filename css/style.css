@@ -2,16 +2,15 @@
     border: 1px dotted blueviolet;
 } */
 
-input.checkbox  {
-    width: 40px;
-    height: 40px;
+input.checkbox {
+  width: 40px;
+  height: 40px;
 }
 input.date {
-    width: 12em;;
+  width: 12em;
 }
 .fa-plus {
-    background-color:white;
-    color:blue;
-    margin: 2em 0 0 20rem;
-   }
- 
+  background-color: white;
+  color: blue;
+}
+
