@@ -20,7 +20,9 @@ input.date {
 }
 
 .fa-plus {
-  background-color: white;
-  color: blue;
+  color:#007bff;
 }
 
+#plusbutton {
+  top: 15px;
+}
