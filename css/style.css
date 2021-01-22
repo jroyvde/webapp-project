@@ -1,8 +1,16 @@
-div {
+/* div {
     border: 1px dotted blueviolet;
+} */
+
+input.checkbox {
+  width: 40px;
+  height: 40px;
+}
+input.date {
+  width: 12em;
+}
+.fa-plus {
+  background-color: white;
+  color: blue;
 }
 
-input.checkbox  {
-    width: 40px;
-    height: 40px;
-}
