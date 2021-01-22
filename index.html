@@ -1,99 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Plan</title>
+    <!--Load in Bootstrap's CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <!--Load in our local CSS style.css-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<div class="container">
-    <div class="row text-center">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="text-center">Main Menu</h3>
-                </div>
-         </div>
-         <div class="row">
-            <div class="col-4">
-                <a href="#">To-Do</a>
-                </div>
-            <div class="col-4">
-                <a href="#">Finish</a>
-                </div>
-            <div class="col-4">
-                <a href="#">All</a>
-                </div>
-        </div>
-        <div class="row m-2">
-            <div class="col-10 card">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                      <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Collapsible Group Item #1
-                          </button>
-                        </h5>
-                      </div>
-                  
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                      </div>
-                    </div>
-               </div>
-            </div>
-            <div class="col-2 p-3"><input type="checkbox" class="checkbox"></div>
-        </div>
-        <div class="row m-2">
-            <div class="col-10 card"><div class="accordion" id="accordionExample2">
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        Collapsible Group Item #1
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample2">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-           </div></div>
-            <div class="col-2 p-3"><input type="checkbox" class="checkbox"></div>
-        </div>
-        <div class="row m-2">
-            <div class="col-10 card"><div class="accordion" id="accordionExample3">
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                        Collapsible Group Item #1
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseThree" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample3">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                  </div>
-                </div>
-           </div></div>
-            <div class="col-2 p-3"><input type="checkbox" class="checkbox"></div>
-        </div>
-        </div>
+<body class="bg-secondary h-100">
+  <!--This container contains the entire layout for the webapp-->
+  <div class="container bg-light h-100">
+    <!--FIRST ROW: This is the FIRST ROW of the layout, it contains only one column, the 'Main Menu' bar-->
+    <div class="row">
+      <div class="col-12 py-4">
+        <h3 class="text-center text-secondary font-weight-bold mb-0">Main Menu</h3>
+      </div>
     </div>
-  
-</div>
+    <!--SECOND ROW: This is the SECOND ROW, it contains only our three filter tabs for 'To-Do', 'Finished', and 'All'-->
+    <div class="row text-center">
+      <div class="col-4 py-4 border border-secondary bg-white">
+        <h2 class="mb-0"><a href="#">To-Do</a></h2>
+      </div>
+      <div class="col-4 py-4 border border-secondary bg-white">
+        <h2 class="mb-0"><a href="#">Finished</a></h2>
+      </div>
+      <div class="col-4 py-4 border border-secondary bg-white">
+        <h2 class="mb-0"><a href="#">All</a></h2>
+      </div>
+    </div>
+    <!--THIRD ROW: This is the THIRD ROW, which contains the first sample Task item-->
+    <div class="row m-2">
+      <!--This column contains the CARD for the sample task-->
+      <div class="col-10">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              Task Name
+            </h5>
+          </div>
+          <div>
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--This column contains the CHECKBOX for the sample task-->
+      <div class="col-2 p-1">
+        <input type="checkbox" class="checkbox">
+      </div>
+    </div>
+    <!--FORTH ROW: This is the FORTH ROW, which contains the second sample Task item-->
+    <div class="row m-2">
+      <!--This column contains the CARD for the sample task-->
+      <div class="col-10">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              Task Name
+            </h5>
+          </div>
+          <div>
+            <div class="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--This column contains the CHECKBOX for the sample task-->
+      <div class="col-2 p-1">
+        <input type="checkbox" class="checkbox">
+      </div>
+    </div>
+  </div>
+<!--Load in Bootstrap's JavaScript-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
