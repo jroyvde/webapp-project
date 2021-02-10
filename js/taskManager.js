@@ -11,7 +11,7 @@ class TaskManager {
             description: description,
             assignedTo: assignedTo,
             dueDate: dueDate,
-            
+            status: status
         }
         this.tasks.push(newTask);
     }
