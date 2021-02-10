@@ -112,15 +112,15 @@ submitButton.addEventListener("click", checkValidity)
 
 //initializing class taskManager
 
-firstTaskManager.addTask(
-  "brush teeth",
-  "Choacoal",
-  "Jacob",
-  "10-02-2021",
-  "completed"
-);
-firstTaskManager.addTask("shower", "wash", "Kev", "10-02-2031", "completed");
-console.log(firstTaskManager.tasks);
+// firstTaskManager.addTask(
+//   "brush teeth",
+//   "Choacoal",
+//   "Jacob",
+//   "10-02-2021",
+//   "completed"
+// );
+// firstTaskManager.addTask("shower", "wash", "Kev", "10-02-2031", "completed");
+// console.log(firstTaskManager.tasks);
 
 // function
 validFormFieldInput = (data) => {
