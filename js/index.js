@@ -69,4 +69,7 @@ if (statusInput.value != "") {
 
 //initializing class taskManager
 const newVar = new TaskManager();
+newVar.addTask('brush teeth','Choacoal','Jacob','10-02-2021','completed')
+newVar.addTask('shower','wash','Kev','10-02-2031','completed')
 console.log(newVar.tasks);
+
