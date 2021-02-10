@@ -23,25 +23,46 @@ validFormFieldInput = (data) => {
 
 // Check Name is longer than 5
 if (nameInput.value.length > 5) {
-    console.log('name longer')
+    nameInput.classList.add('is-valid');
+    nameInput.classList.remove('is-invalid');
+}else {
+    nameInput.classList.add('is-invalid');
+    nameInput.classList.remove('is-valid');
 }
 
 // Check Description is longer than 5
 if (descriptionInput.value.length > 5) {
-    console.log("desc longer");
+    descriptionInput.classList.add('is-valid');
+    descriptionInput.classList.remove('is-invalid');
+}else {
+    descriptionInput.classList.add('is-invalid');
+    descriptionInput.classList.remove('is-valid');
+    
 }
 
 // Check Assigned To is longer than 5
 if (assignInput.value.length > 5) {
-    console.log("assigned longer");
+    assignInput.classList.add('is-valid');
+    assignInput.classList.remove('is-invalid');
+}else {
+    assignInput.classList.add('is-invalid');
+    assignInput.classList.remove('is-valid');
 }
 
 // Check Due Date is not empty
 if (dueDateInput.value != "") {
-    console.log("date not empty");
+    dueDateInput.classList.add('is-valid');
+    dueDateInput.classList.remove('is-invalid');
+}else {
+    dueDateInput.classList.add('is-invalid');
+    dueDateInput.classList.remove('is-valid');
 }
 
 // Check Status is not empty
 if (statusInput.value != "") {
-    console.log("status not empty");
+    statusInput.classList.add('is-valid');
+    statusInput.classList.remove('is-invalid');
+}else {
+    statusInput.classList.add('is-invalid');
+    statusInput.classList.remove('is-valid');
 }
