@@ -33,7 +33,7 @@ class TaskManager {
     this.currentId = 0;
   }
   addTask(name, description, assignedTo, dueDate, status) {
-    this.currentId++;
+
     const newTask = {
       id: this.currentId,
       name: name,
@@ -43,6 +43,7 @@ class TaskManager {
       status: status
     }
     this.tasks.push(newTask);
+    this.currentId++;
   }
 
   render() {
@@ -58,6 +59,17 @@ class TaskManager {
     document.querySelector('#task-list').innerHTML = tasksHtml;
   };
 
+  getTaskById(taskId) {
+    let foundTask;
+    this.tasks.forEach((item) => {
+      let task = item;
+      if (task.id === taskId) {
+        foundTask = task;
 
+      }
+    })
+
+    return foundTask;
+  }
 
 };
