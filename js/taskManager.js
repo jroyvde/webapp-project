@@ -13,7 +13,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
           <div class="card-footer text-muted row px-0 mx-0">
             <div class="col-md-7 d-flex align-items-center">
               <span class="mr-4">Assigned to: ${assignedTo}</span>
-              <span class="">Date: ${dueDate}</span>
+              <span class="mr-4">Date: ${dueDate}</span>
+              <span class="">Status: ${status}</span>
             </div>
             <div class="col-md-5 d-flex justify-content-end">
               <a href="#" class="btn btn-success">Edit</a>
@@ -26,7 +27,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
           <input type="checkbox" class="checkbox">
         </div>
     </div>
-  </li>` ;
+  </li>`; ;
   return html;
 }
 
@@ -52,7 +53,7 @@ class TaskManager {
     const tasksHtmlList = [];
     this.tasks.forEach((element) => {
       const date = new Date(element.dueDate);
-      const formattedDate = `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`;
+      const formattedDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
       const taskHtml = createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status)
       tasksHtmlList.push(taskHtml);
     })

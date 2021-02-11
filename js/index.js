@@ -85,7 +85,6 @@ checkAssignInput();
 checkDueDateInput();
 checkStatusInput();
 
-
 // This function is called when the submit button is pressed
 const checkValidity = () => {
   if (
@@ -103,6 +102,18 @@ const checkValidity = () => {
       statusInput.value
     );
     firstTaskManager.render();
+    // Reset all input values to empty
+    nameInput.value = "";
+    descriptionInput.value = "";
+    assignInput.value = "";
+    dueDateInput.value = "";
+    statusInput.value = "TO DO";
+    // Check all input values after clearing to empty
+    checkNameInput();
+    checkDescriptionInput();
+    checkAssignInput();
+    checkDueDateInput();
+    checkStatusInput();
   } else {
     console.log("Form value(s) not valid");
   }
