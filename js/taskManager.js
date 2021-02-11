@@ -57,7 +57,7 @@ class TaskManager {
       tasksHtmlList.push(taskHtml);
     })
 
-    const tasksHtml = tasksHtml.join("\n")
+    const tasksHtml = tasksHtmlList.join("\n")
     document.querySelector('#task-list').innerHTML = tasksHtml;
   };
 

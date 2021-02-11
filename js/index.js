@@ -102,6 +102,7 @@ const checkValidity = () => {
       dueDateInput.value,
       statusInput.value
     );
+    firstTaskManager.render();
   } else {
     console.log("Form value(s) not valid");
   }
