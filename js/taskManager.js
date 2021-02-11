@@ -1,5 +1,5 @@
-const createTaskHtml = (name,description,assignedTo,dueDate,status) =>{
-       const html =`
+const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
+    const html = `
        <div class="row m-2">
        <!--This column contains the CARD for the sample task-->
        <div class="col-10">
@@ -25,7 +25,7 @@ const createTaskHtml = (name,description,assignedTo,dueDate,status) =>{
          <input type="checkbox" class="checkbox">
        </div>
      </div>` ;
-     return html;
+    return html;
 }
 
 class TaskManager {
@@ -33,10 +33,10 @@ class TaskManager {
         this.tasks = []
         this.currentId = 0;
     }
-    addTask(name,description,assignedTo,dueDate,status){
-        this.currentId ++;
+    addTask(name, description, assignedTo, dueDate, status) {
+        this.currentId++;
         const newTask = {
-            id : this.currentId,
+            id: this.currentId,
             name: name,
             description: description,
             assignedTo: assignedTo,
@@ -45,4 +45,20 @@ class TaskManager {
         }
         this.tasks.push(newTask);
     }
-   };
+
+    render() {
+        const tasksHtmlList = [];
+        this.tasks.forEach((element) => {
+            const date = new Date(element.dueDate);
+            const formattedDate = `${date.getFullYear()}/${date.getMonth()}/${date.getDate()}`;
+            const taskHtml = createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status)
+            tasksHtmlList.push(taskHtml);
+        })
+
+        const tasksHtml = tasksHtml.join("\n")
+
+    };
+
+
+
+};
