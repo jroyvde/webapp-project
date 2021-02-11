@@ -114,6 +114,7 @@ const checkValidity = () => {
     checkAssignInput();
     checkDueDateInput();
     checkStatusInput();
+
   } else {
     console.log("Form value(s) not valid");
   }
@@ -135,6 +136,20 @@ submitButton.addEventListener("click", checkValidity)
 // console.log(firstTaskManager.tasks);
 
 // function
+
+const taskList = document.querySelector('#task-list')
+taskList.addEventListener('click',(event)=>{
+  if(event.target.classList.contains('done-button')){
+    const parentTask = 
+    event.target.parentElement.parentElement.parentElement.parentElement.parentElement
+    console.log(parentTask);
+    // const taskId = Number(parentTask.dataset.taskId);
+    // const task = TaskManager.getTaskById(taskId);
+    // task.status = "Done";
+  }
+})
+
 validFormFieldInput = (data) => {
 
 }
+

@@ -17,7 +17,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
               <span class="">Status: ${status}</span>
             </div>
             <div class="col-md-5 d-flex justify-content-end">
-              <a href="#" class="btn btn-success">Edit</a>
+              <a href="#" class="btn btn-success done-button">Done</a>
               <a href="#" class="btn btn-danger ml-1">Delete</a>
             </div>
           </div>
