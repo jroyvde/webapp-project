@@ -143,6 +143,12 @@ taskList.addEventListener('click',(event)=>{
     const parentTask = 
     event.target.parentElement.parentElement.parentElement.parentElement.parentElement
     console.log(parentTask);
+    const taskId = Number(parentTask.dataset.taskId);
+    console.log(taskId);
+    const task = firstTaskManager.getTaskById(taskId);
+    console.log(task);
+    task.status = 'DONE';
+    firstTaskManager.render();
     // const taskId = Number(parentTask.dataset.taskId);
     // const task = TaskManager.getTaskById(taskId);
     // task.status = "Done";
