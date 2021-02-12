@@ -8,6 +8,7 @@ const descriptionInput = document.querySelector('#description');
 const assignInput = document.querySelector('#assign');
 const dueDateInput = document.querySelector('#dueDate');
 const statusInput = document.querySelector("#status");
+const cancel = document.querySelector('#cancel')
 
 // Declare variable for Submit Button
 const submitButton = document.querySelector("#submit")
@@ -17,6 +18,7 @@ const checkNameInput = () => {
     if (nameInput.value.length > 5) {
       nameInput.classList.add("is-valid");
       nameInput.classList.remove("is-invalid");
+      submitButton.setAttribute('data-dismiss','modal')
     } else {
       nameInput.classList.add("is-invalid");
       nameInput.classList.remove("is-valid");
@@ -30,6 +32,7 @@ const checkDescriptionInput = () => {
     if (descriptionInput.value.length > 5) {
       descriptionInput.classList.add("is-valid");
       descriptionInput.classList.remove("is-invalid");
+      submitButton.setAttribute('data-dismiss','modal')
     } else {
       descriptionInput.classList.add("is-invalid");
       descriptionInput.classList.remove("is-valid");
@@ -43,6 +46,7 @@ const checkAssignInput = () => {
     if (assignInput.value.length > 5) {
       assignInput.classList.add("is-valid");
       assignInput.classList.remove("is-invalid");
+      submitButton.setAttribute('data-dismiss','modal')
     } else {
       assignInput.classList.add("is-invalid");
       assignInput.classList.remove("is-valid");
@@ -56,6 +60,7 @@ const checkDueDateInput = () => {
     if (dueDateInput.value != "") {
       dueDateInput.classList.add("is-valid");
       dueDateInput.classList.remove("is-invalid");
+      submitButton.setAttribute('data-dismiss','modal')
     } else {
       dueDateInput.classList.add("is-invalid");
       dueDateInput.classList.remove("is-valid");
@@ -70,6 +75,7 @@ const checkStatusInput = () => {
     if (statusInput.value != "") {
       statusInput.classList.add("is-valid");
       statusInput.classList.remove("is-invalid");
+      submitButton.setAttribute('data-dismiss','modal')
     } else {
       statusInput.classList.add("is-invalid");
       statusInput.classList.remove("is-valid");
@@ -78,12 +84,12 @@ const checkStatusInput = () => {
 // Listen for Status input value to change, and run function to check if valid
 statusInput.addEventListener("change", checkStatusInput);
 
-// Check all inputs as soon as the page is loaded
-checkNameInput();
-checkDescriptionInput();
-checkAssignInput();
-checkDueDateInput();
-checkStatusInput();
+//Check all inputs as soon as the page is loaded
+// checkNameInput();
+// checkDescriptionInput();
+// checkAssignInput();
+// checkDueDateInput();
+// checkStatusInput();
 
 // This function is called when the submit button is pressed
 const checkValidity = () => {
@@ -92,8 +98,11 @@ const checkValidity = () => {
     descriptionInput.classList.contains("is-valid") &&
     assignInput.classList.contains("is-valid") &&
     dueDateInput.classList.contains("is-valid") &&
-    statusInput.classList.contains("is-valid")
-  ) {
+    statusInput.classList.contains("is-valid")) {
+
+  // If user inputs are valid then remove dismiss-data attribute and button should work
+  submitButton.removeAttribute('dismiss-data')
+
     firstTaskManager.addTask(
       nameInput.value,
       descriptionInput.value,
@@ -101,6 +110,7 @@ const checkValidity = () => {
       dueDateInput.value,
       statusInput.value
     );
+    
     firstTaskManager.render();
     // Reset all input values to empty
     nameInput.value = "";
@@ -108,20 +118,63 @@ const checkValidity = () => {
     assignInput.value = "";
     dueDateInput.value = "";
     statusInput.value = "TO DO";
-    // Check all input values after clearing to empty
-    checkNameInput();
-    checkDescriptionInput();
-    checkAssignInput();
-    checkDueDateInput();
-    checkStatusInput();
 
+    //Check all input values after clearing to empty
+    // checkNameInput();
+    // checkDescriptionInput();
+    // checkAssignInput();
+    // checkDueDateInput();
+    // checkStatusInput();
+
+  //Removes the is-valid class after the user input has been validated
+
+  nameInput.classList.remove("is-valid")
+  descriptionInput.classList.remove("is-valid")
+  assignInput.classList.remove("is-valid")
+  dueDateInput.classList.remove("is-valid")
+  statusInput.classList.remove("is-valid")
+
+
+   submitButton.setAttribute('data-dismiss','modal') 
+
+   
   } else {
-    console.log("Form value(s) not valid");
+     // If user does not fill the form correctly then we remove data dissmiss from button
+    // Button stops working.
+      submitButton.removeAttribute('data-dismiss')
+
+      // console.log("Form value(s) not valid");
   }
 };
 
 // Listener to check when the submit button is pressed
 submitButton.addEventListener("click", checkValidity)
+cancel.addEventListener('click', ()=>{
+
+  // Clear all inputs  after user input
+  nameInput.value = '';
+  descriptionInput.value = '';
+  assignInput.value = '';
+  dueDateInput.value = '';
+  statusInput.value = '';
+
+  //Set data dismiss attribute when task details is validated
+  
+  submitButton.setAttribute('data-dismiss','modal')
+
+  nameInput.classList.remove("is-valid")
+  descriptionInput.classList.remove("is-valid")
+  assignInput.classList.remove("is-valid")
+  dueDateInput.classList.remove("is-valid")
+  statusInput.classList.remove("is-valid")
+
+  nameInput.classList.remove("is-invalid")
+  descriptionInput.classList.remove("is-invalid")
+  assignInput.classList.remove("is-invalid")
+  dueDateInput.classList.remove("is-invalid")
+  statusInput.classList.remove("is-invalid")
+  
+})
 
 //initializing class taskManager
 
@@ -136,6 +189,8 @@ submitButton.addEventListener("click", checkValidity)
 // console.log(firstTaskManager.tasks);
 
 // function
+
+
 
 const taskList = document.querySelector('#task-list')
 taskList.addEventListener('click',(event)=>{
