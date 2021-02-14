@@ -2,6 +2,10 @@
 // Initialize first Task Manager
 const firstTaskManager = new TaskManager();
 
+// Load in tasks and currentId from local storage
+firstTaskManager.load();
+firstTaskManager.render();
+
 // Declare variables for input IDs
 const nameInput = document.querySelector('#name');
 const descriptionInput = document.querySelector('#description');

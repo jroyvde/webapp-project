@@ -79,4 +79,15 @@ class TaskManager {
     localStorage.setItem('currentId', currentIdJson);
   }
 
+  load() {
+    if (localStorage.getItem('tasks')) {
+      let tasksJson = localStorage.getItem("tasks");
+      this.tasks = JSON.parse(tasksJson);
+    }
+    if (localStorage.getItem('currentId')) {
+      let currentIdJson = localStorage.getItem("currentId");
+      this.currentId = parseInt(currentIdJson);
+    }
+  }
+
 };
