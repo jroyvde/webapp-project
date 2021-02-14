@@ -1,14 +1,3 @@
-/* Provisional styling to make div borders easily distinguishable */
-/*
-div {
-    border: 1px dotted blueviolet;
-}
-
-div.row {
-    border: 1px dotted orange;
-}
-*/
-
 /* Make checkboxes bigger */
 input.checkbox  {
     width: 40px;
@@ -25,4 +14,8 @@ input.date {
 
 #plusbutton {
   top: 15px;
+}
+
+#status {
+  width: 10em;
 }
