@@ -88,12 +88,7 @@ const checkStatusInput = () => {
 // Listen for Status input value to change, and run function to check if valid
 statusInput.addEventListener("change", checkStatusInput);
 
-//Check all inputs as soon as the page is loaded
-// checkNameInput();
-// checkDescriptionInput();
-// checkAssignInput();
-// checkDueDateInput();
-// checkStatusInput();
+
 
 // This function is called when the submit button is pressed
 const checkValidity = () => {
@@ -125,12 +120,7 @@ const checkValidity = () => {
     dueDateInput.value = "";
     statusInput.value = "TO DO";
 
-    //Check all input values after clearing to empty
-    // checkNameInput();
-    // checkDescriptionInput();
-    // checkAssignInput();
-    // checkDueDateInput();
-    // checkStatusInput();
+
 
     //Removes the is-valid class after the user input has been validated
 
@@ -182,22 +172,6 @@ cancel.addEventListener('click', () => {
 
 })
 
-//initializing class taskManager
-
-// firstTaskManager.addTask(
-//   "brush teeth",
-//   "Choacoal",
-//   "Jacob",
-//   "10-02-2021",
-//   "completed"
-// );
-// firstTaskManager.addTask("shower", "wash", "Kev", "10-02-2031", "completed");
-// console.log(firstTaskManager.tasks);
-
-// function
-
-
-
 const taskList = document.querySelector('#task-list')
 taskList.addEventListener('click', (event) => {
   if (event.target.classList.contains('done-button')) {
@@ -211,14 +185,9 @@ taskList.addEventListener('click', (event) => {
     task.status = 'DONE';
     firstTaskManager.save();
     firstTaskManager.render();
-    // const taskId = Number(parentTask.dataset.taskId);
-    // const task = TaskManager.getTaskById(taskId);
-    // task.status = "Done";
   }
 
 })
-
-
 
 //validFormFieldInput = (data) => {}
 
