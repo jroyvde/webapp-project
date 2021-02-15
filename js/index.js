@@ -110,9 +110,10 @@ const checkValidity = () => {
       statusInput.value
     );
 
-
+//Save user input as soon as form id validated and task is added to the Task Manager class.
     firstTaskManager.save();
     firstTaskManager.render();
+    
     // Reset all input values to empty
     nameInput.value = "";
     descriptionInput.value = "";

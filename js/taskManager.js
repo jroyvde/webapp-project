@@ -73,19 +73,36 @@ class TaskManager {
   }
 
   save() {
+    // Create a JSON string of the tasks
     let tasksJson = JSON.stringify(this.tasks);
+
+ // Add the JSON string to the localStorage
     localStorage.setItem('tasks', tasksJson);
+
+     // Change the currentId into a string;
     let currentIdJson = JSON.stringify(this.currentId);
+
+      // Add the currentId into the localStorage
     localStorage.setItem('currentId', currentIdJson);
   }
 
   load() {
+
+    // Check if any tasks are saved in localStorage
     if (localStorage.getItem('tasks')) {
+       
+    // Retrieve the JSON string of tasks in localStorage
       let tasksJson = localStorage.getItem("tasks");
+
+ // Convert tasks JSON string back into an array and store it in our TaskManager
       this.tasks = JSON.parse(tasksJson);
     }
+    //Check if the currentId is in localStorage
     if (localStorage.getItem('currentId')) {
+       // Retrieve the currentId string in localStorage
       let currentIdJson = localStorage.getItem("currentId");
+
+       // Convert the currentId back to a number and store it in our TaskManager
       this.currentId = parseInt(currentIdJson);
     }
   }
