@@ -18,7 +18,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
           </div>
           <div class="col-md-5 d-flex justify-content-end">
             <a href="#" class="btn btn-success done-button">Done</a>
-            <a href="#" class="btn btn-danger ml-1">Delete</a>
+            <a href="#" class="btn btn-danger ml-1 delete-button">Delete</a>
           </div>
         </div>
       </div>
@@ -76,13 +76,13 @@ class TaskManager {
     // Create a JSON string of the tasks
     let tasksJson = JSON.stringify(this.tasks);
 
- // Add the JSON string to the localStorage
+    // Add the JSON string to the localStorage
     localStorage.setItem('tasks', tasksJson);
 
-     // Change the currentId into a string;
+    // Change the currentId into a string;
     let currentIdJson = JSON.stringify(this.currentId);
 
-      // Add the currentId into the localStorage
+    // Add the currentId into the localStorage
     localStorage.setItem('currentId', currentIdJson);
   }
 
@@ -90,21 +90,32 @@ class TaskManager {
 
     // Check if any tasks are saved in localStorage
     if (localStorage.getItem('tasks')) {
-       
-    // Retrieve the JSON string of tasks in localStorage
+
+      // Retrieve the JSON string of tasks in localStorage
       let tasksJson = localStorage.getItem("tasks");
 
- // Convert tasks JSON string back into an array and store it in our TaskManager
+      // Convert tasks JSON string back into an array and store it in our TaskManager
       this.tasks = JSON.parse(tasksJson);
     }
     //Check if the currentId is in localStorage
     if (localStorage.getItem('currentId')) {
-       // Retrieve the currentId string in localStorage
+      // Retrieve the currentId string in localStorage
       let currentIdJson = localStorage.getItem("currentId");
 
-       // Convert the currentId back to a number and store it in our TaskManager
+      // Convert the currentId back to a number and store it in our TaskManager
       this.currentId = parseInt(currentIdJson);
     }
+  }
+
+  deleteTask(taskId) {
+    let newTasks = [];
+    this.tasks.forEach((taskToCheck) => {
+      if (taskToCheck.id != taskId) {
+        newTasks.push(taskToCheck);
+      }
+    })
+
+    this.tasks = newTasks;
   }
 
 };
