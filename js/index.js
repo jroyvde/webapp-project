@@ -188,6 +188,15 @@ taskList.addEventListener('click', (event) => {
     firstTaskManager.render();
   }
 
+  if(event.target.classList.contains('delete-button')){
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+      const taskId = Number(parentTask.dataset.taskId);
+     firstTaskManager.deleteTask(taskId);
+     firstTaskManager.save()
+     firstTaskManager.render()
+  }
+
 })
 
 //validFormFieldInput = (data) => {}
