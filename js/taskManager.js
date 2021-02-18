@@ -1,32 +1,3 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
-  const html = `
-  <li data-task-id="${id}">     
-    <div class="row m-2">
-      <!--This column contains the CARD for the sample task-->
-      <div class="col-12">
-        <div class="card-header" style="text-align:left;">
-          ${name}
-        </div>
-        <div class="card-body" style="text-align: left;">
-          <p class="card-text ">${description}</p>
-        </div>
-        <div class="card-footer text-muted row px-0 mx-0">
-          <div class="col-md-7 d-flex align-items-center">
-            <span class="mr-4">Assigned to: ${assignedTo}</span>
-            <span class="mr-4">Date: ${dueDate}</span>
-            <span class="">Status: ${status}</span>
-          </div>
-          <div class="col-md-5 d-flex justify-content-end">
-            <a href="#" class="btn btn-success done-button">Done</a>
-            <a href="#" class="btn btn-danger ml-1">Delete</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </li>`;
-  return html;
-}
-
 class TaskManager {
   constructor(currentId) {
     this.tasks = []
@@ -46,12 +17,42 @@ class TaskManager {
     this.currentId++;
   }
 
+
+  createTaskHtml(name, description, assignedTo, dueDate, status, id) {
+    const html = `
+  <li data-task-id="${id}">     
+    <div class="row m-2">
+      <!--This column contains the CARD for the sample task-->
+      <div class="col-12">
+        <div class="card-header" style="text-align:left;">
+          ${name}
+        </div>
+        <div class="card-body" style="text-align: left;">
+          <p class="card-text ">${description}</p>
+        </div>
+        <div class="card-footer text-muted row px-0 mx-0">
+          <div class="col-md-7 d-flex align-items-center">
+            <span class="mr-4">Assigned to: ${assignedTo}</span>
+            <span class="mr-4">Date: ${dueDate}</span>
+            <span class="">Status: ${status}</span>
+          </div>
+          <div class="col-md-5 d-flex justify-content-end">
+            <a href="#" class="btn btn-success done-button">Done</a>
+            <a href="#" class="btn btn-danger ml-1 delete-button">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>`;
+    return html;
+  }
+
   render() {
     const tasksHtmlList = [];
     this.tasks.forEach((element) => {
       const date = new Date(element.dueDate);
       const formattedDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-      const taskHtml = createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status, element.id)
+      const taskHtml = this.createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status, element.id)
       tasksHtmlList.push(taskHtml);
     })
 
@@ -72,4 +73,53 @@ class TaskManager {
     return foundTask;
   }
 
+  save() {
+    // Create a JSON string of the tasks
+    let tasksJson = JSON.stringify(this.tasks);
+
+    // Add the JSON string to the localStorage
+    localStorage.setItem('tasks', tasksJson);
+
+    // Change the currentId into a string;
+    let currentIdJson = JSON.stringify(this.currentId);
+
+    // Add the currentId into the localStorage
+    localStorage.setItem('currentId', currentIdJson);
+  }
+
+  load() {
+
+    // Check if any tasks are saved in localStorage
+    if (localStorage.getItem('tasks')) {
+
+      // Retrieve the JSON string of tasks in localStorage
+      let tasksJson = localStorage.getItem("tasks");
+
+      // Convert tasks JSON string back into an array and store it in our TaskManager
+      this.tasks = JSON.parse(tasksJson);
+    }
+    //Check if the currentId is in localStorage
+    if (localStorage.getItem('currentId')) {
+      // Retrieve the currentId string in localStorage
+      let currentIdJson = localStorage.getItem("currentId");
+
+      // Convert the currentId back to a number and store it in our TaskManager
+      this.currentId = parseInt(currentIdJson);
+    }
+  }
+
+  deleteTask(taskId) {
+    let newTasks = [];
+    this.tasks.forEach((taskToCheck) => {
+      if (taskToCheck.id != taskId) {
+        newTasks.push(taskToCheck);
+      }
+    })
+
+    this.tasks = newTasks;
+  }
+
 };
+
+
+module.exports = TaskManager
