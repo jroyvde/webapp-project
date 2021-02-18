@@ -129,7 +129,7 @@ const checkValidity = () => {
     descriptionInput.classList.remove("is-valid")
     assignInput.classList.remove("is-valid")
     dueDateInput.classList.remove("is-valid")
-    statusInput.classList.remove("is-valid")
+    //statusInput.classList.remove("is-valid")
 
 
     submitButton.setAttribute('data-dismiss', 'modal')
@@ -153,7 +153,7 @@ cancel.addEventListener('click', () => {
   descriptionInput.value = '';
   assignInput.value = '';
   dueDateInput.value = '';
-  statusInput.value = '';
+  statusInput.value = 'TO DO';
 
   //Set data dismiss attribute when task details is validated
 
@@ -163,7 +163,7 @@ cancel.addEventListener('click', () => {
   descriptionInput.classList.remove("is-valid")
   assignInput.classList.remove("is-valid")
   dueDateInput.classList.remove("is-valid")
-  statusInput.classList.remove("is-valid")
+  //statusInput.classList.remove("is-valid")
 
   nameInput.classList.remove("is-invalid")
   descriptionInput.classList.remove("is-invalid")
