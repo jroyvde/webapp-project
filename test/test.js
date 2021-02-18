@@ -37,6 +37,7 @@ describe('TaskManager', () => {
       });
 
       it("should successfully remove the chosen task", () => {
+        // EXERCISE: Add the 'wash the dishes' task into the tasks array
         firstTaskManager.addTask(
           "wash the dishes",
           "Need to wahs the dishes",
@@ -62,7 +63,7 @@ describe('TaskManager', () => {
       });
 
       it("should successfully get a task object by its ID number", () => {
-        // SETUP: Declare the expected result, which is the first task object in the 'tasks' array
+        // SETUP: Declare the expected result, which will be the first task object in the 'tasks' array
         const expectedResult = {
           assignedTo: "Georges",
           description: "Need to wahs the dishes",
