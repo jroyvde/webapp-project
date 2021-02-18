@@ -12,9 +12,8 @@ describe('TaskManager', () => {
         });
         
         it('should successfully add a new task to the taskManager ', () => {
-            
             // EXERCISE: Add the 'wash the dishes' task into the tasks array
-            firstTaskManager.addTask('wash the dishes', 'Need to wahs the dishes', 'Georges', '2021-03-12', 'TO DO');
+            firstTaskManager.addTask('wash the dishes', 'Need to wash the dishes', 'Georges', '2021-03-12', 'TO DO');
             // Declare boolean 'success' and set its value to 'false'
             let success = false;
             // Iterate through each item in the 'tasks' array
@@ -40,18 +39,24 @@ describe('TaskManager', () => {
         // EXERCISE: Add the 'wash the dishes' task into the tasks array
         firstTaskManager.addTask(
           "wash the dishes",
-          "Need to wahs the dishes",
+          "Need to wash the dishes",
           "Georges",
           "2021-03-12",
           "TO DO"
         );
+        // Call .deleteTask to remove the task in index 0, which should be the task we just added
         firstTaskManager.deleteTask(0);
+        // Declare boolean 'success' and set its value to 'true'
         let success = true;
+        // Iterate through each item in the 'tasks' array
         firstTaskManager.tasks.forEach((item) => {
+          // If an item with the 'name' 'wash the dishes' is found, change 'success' to 'false'
           if (item.name === "wash the dishes") {
             success = false;
           }
         });
+
+        // VERIFY: Check if success is true
         assert.strictEqual(success, true);
       });
     })
@@ -66,7 +71,7 @@ describe('TaskManager', () => {
         // SETUP: Declare the expected result, which will be the first task object in the 'tasks' array
         const expectedResult = {
           assignedTo: "Georges",
-          description: "Need to wahs the dishes",
+          description: "Need to wash the dishes",
           dueDate: "2021-03-12",
           id: 0,
           name: "wash the dishes",
@@ -76,7 +81,7 @@ describe('TaskManager', () => {
         // EXERCISE: Add the 'wash the dishes' task
         firstTaskManager.addTask(
           "wash the dishes",
-          "Need to wahs the dishes",
+          "Need to wash the dishes",
           "Georges",
           "2021-03-12",
           "TO DO"
