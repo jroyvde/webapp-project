@@ -1,5 +1,25 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
-  const html = `
+class TaskManager {
+  constructor(currentId) {
+    this.tasks = []
+    this.currentId = 0;
+  }
+  addTask(name, description, assignedTo, dueDate, status) {
+
+    const newTask = {
+      id: this.currentId,
+      name: name,
+      description: description,
+      assignedTo: assignedTo,
+      dueDate: dueDate,
+      status: status
+    }
+    this.tasks.push(newTask);
+    this.currentId++;
+  }
+
+
+  createTaskHtml(name, description, assignedTo, dueDate, status, id) {
+    const html = `
   <li data-task-id="${id}">     
     <div class="row m-2">
       <!--This column contains the CARD for the sample task-->
@@ -24,26 +44,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => {
       </div>
     </div>
   </li>`;
-  return html;
-}
-
-class TaskManager {
-  constructor(currentId) {
-    this.tasks = []
-    this.currentId = 0;
-  }
-  addTask(name, description, assignedTo, dueDate, status) {
-
-    const newTask = {
-      id: this.currentId,
-      name: name,
-      description: description,
-      assignedTo: assignedTo,
-      dueDate: dueDate,
-      status: status
-    }
-    this.tasks.push(newTask);
-    this.currentId++;
+    return html;
   }
 
   render() {
@@ -51,7 +52,7 @@ class TaskManager {
     this.tasks.forEach((element) => {
       const date = new Date(element.dueDate);
       const formattedDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
-      const taskHtml = createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status, element.id)
+      const taskHtml = this.createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status, element.id)
       tasksHtmlList.push(taskHtml);
     })
 
@@ -119,3 +120,6 @@ class TaskManager {
   }
 
 };
+
+
+module.exports = TaskManager
