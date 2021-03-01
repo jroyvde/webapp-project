@@ -1,4 +1,4 @@
-# webapp-project
+# Webapp-Project
 
 ![alt image](rel path)
 
@@ -6,7 +6,7 @@
 
 This is a Task Planner CRUD (Create, Read, Update, Delete) project application made by a group of [contributors](https://github.com/jroyvde/webapp-project/graphs/contributors) in the Generations Australia course for Junior Web Developer
 
-shields!!!
+[![GitHub issues](https://img.shields.io/github/issues/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/issues) [![GitHub forks](https://img.shields.io/github/forks/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/network) [![GitHub stars](https://img.shields.io/github/stars/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/stargazers) [![GitHub license](https://img.shields.io/github/license/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/blob/main/LICENSE) 
 
 ## Getting Started
 
