@@ -3,7 +3,7 @@
 const firstTaskManager = new TaskManager();
 
 const today = new Date().toISOString().split('T')[0];
-document.querySelector("#dueDate").setAttribute('min', today);
+document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
 
 
 // Load in tasks and currentId from local storage
