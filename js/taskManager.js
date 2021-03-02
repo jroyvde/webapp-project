@@ -19,6 +19,10 @@ class TaskManager {
 
 
   createTaskHtml(name, description, assignedTo, dueDate, status, id) {
+    let doneButtonClass = ''
+    if(status === 'DONE'){
+      doneButtonClass = 'd-none'
+    }
     const html = `
   <li data-task-id="${id}">     
     <div class="row m-2">
@@ -31,16 +35,20 @@ class TaskManager {
           <p class="card-text ">${description}</p>
         </div>
         <div class="card-footer text-muted row px-0 mx-0">
-          <div class="col-md-7 d-flex align-items-center">
-            <span class="mr-4">Assigned to: ${assignedTo}</span>
-            <span class="mr-4">Date: ${dueDate}</span>
-            <span class="">Status: ${status}</span>
+          <div class="col-md-7 d-flex align-items-center justify-content-between">
+            <span class="mr-4">Assigned to: <br class="d-md-none"/> ${assignedTo}</span>
+            <span class="mr-4">Date: <br class="d-md-none"/> ${dueDate}</span>
+            <span class="">Status:<br class="d-md-none"/> ${status}</span>
           </div>
-          <div class="col-md-5 d-flex justify-content-end">
-            <a href="#" class="btn btn-success done-button">Done</a>
+          <div class="col-md-5 d-none justify-content-end d-sm-flex align-items-center">
+            <a href="#" class="btn btn-success done-button ${doneButtonClass}">Done</a>
             <a href="#" class="btn btn-danger ml-1 delete-button">Delete</a>
           </div>
-        </div>
+          <div class="col-12 d-flex justify-content-end d-sm-none p-2">
+            <a href="#" class="btn btn-success done-button ${doneButtonClass}">Done</a>
+            <a href="#" class="btn btn-danger ml-1 delete-button">Delete</a>
+          </div>
+       </div>
       </div>
     </div>
   </li>`;

@@ -2,6 +2,10 @@
 // Initialize first Task Manager
 const firstTaskManager = new TaskManager();
 
+const today = new Date().toISOString().split('T')[0];
+document.querySelector("#dueDate").setAttribute('min', today);
+
+
 // Load in tasks and currentId from local storage
 firstTaskManager.load();
 firstTaskManager.render();

@@ -1,7 +1,6 @@
-/* Make checkboxes bigger */
-input.checkbox  {
-    width: 40px;
-    height: 40px;
+body{
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  background-repeat: no-repeat;
 }
 
 input.date {
@@ -9,7 +8,7 @@ input.date {
 }
 
 .fa-plus {
-  color:#007bff;
+  color:#9890e3;
 }
 
 #plusbutton {
@@ -18,4 +17,16 @@ input.date {
 
 #status {
   width: 10em;
+}
+
+.btn{
+  max-height: 40px;
+  opacity: .9;
+}
+#submit{
+  background-color: #9890e3;
+  color: white;
+}
+.col-form-label{
+  text-align: right;
 }
