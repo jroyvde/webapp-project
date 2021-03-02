@@ -1,6 +1,6 @@
 # Webapp-Project
 
-![alt image](rel path)
+![Task App GIF](https://res.cloudinary.com/dqanv8tij/image/upload/v1614721291/task-app-mock_lflr3s.gif)
 
 [Web Task App](https://jroyvde.github.io/webapp-project/)
 
