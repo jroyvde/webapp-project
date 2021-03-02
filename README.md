@@ -53,4 +53,14 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to Bhaumik and Aaron at Generations Australia for the help and guidance
 
 
+![Intro](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726595/1_wvz8pq.jpg)
+![Adding Tasks](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726596/3_chkuv2.jpg)
+![Demonsrating Tasks](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726597/4_y0nvkk.jpg)
+![UX & Responsiveness](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726596/5_aden9g.jpg)
+![Thanks](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726596/6_ktajyd.jpg)
+
+## THE END :clap:
+
+
+
 
