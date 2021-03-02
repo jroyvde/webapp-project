@@ -2,7 +2,7 @@
 
 ![alt image](rel path)
 
-[name link](url/gitpages)
+[Web Task App](https://jroyvde.github.io/webapp-project/)
 
 This is a Task Planner CRUD (Create, Read, Update, Delete) project application made by a group of [contributors](https://github.com/jroyvde/webapp-project/graphs/contributors) in the Generations Australia course for Junior Web Developer
 
