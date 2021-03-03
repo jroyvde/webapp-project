@@ -2,8 +2,15 @@
 // Initialize first Task Manager
 const firstTaskManager = new TaskManager();
 
-const today = new Date().toISOString().split('T')[0];
-document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+const todayInput = new Date();
+let todayDay = todayInput.getDate().toString();
+let todayMonth = (todayInput.getMonth() + 1).toString();
+const todayYear = todayInput.getFullYear().toString();
+if (todayDay.length < 2) { todayDay = `0${todayDay}`; }
+if (todayMonth.length < 2) { todayMonth = `0${todayMonth}`; }
+const today = `${todayYear}-${todayMonth}-${todayDay}`;
+document.getElementById('dueDate').setAttribute('min', today);
+
 
 
 // Load in tasks and currentId from local storage

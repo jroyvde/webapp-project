@@ -38,7 +38,7 @@ class TaskManager {
           <div class="col-md-7 d-flex align-items-center justify-content-between">
             <span class="mr-4">Assigned to: <br class="d-md-none"/> ${assignedTo}</span>
             <span class="mr-4">Date: <br class="d-md-none"/> ${dueDate}</span>
-            <span class="">Status:<br class="d-md-none"/> ${status}</span>
+            <span class="">Status:<br class="d-lg-none"/> ${status}</span>
           </div>
           <div class="col-md-5 d-none justify-content-end d-sm-flex align-items-center">
             <a href="#" class="btn btn-success done-button ${doneButtonClass}">Done</a>
@@ -65,7 +65,12 @@ class TaskManager {
     })
 
     const tasksHtml = tasksHtmlList.join("\n")
-    document.querySelector('#task-list').innerHTML = tasksHtml;
+    if(tasksHtmlList.length){
+      document.querySelector('#task-list').innerHTML = tasksHtml
+      console.log(tasksHtmlList.length);
+    }else{
+      document.querySelector('#task-list').innerHTML = '<img src="./image.svg"width ="200px">'
+    }
   };
 
   getTaskById(taskId) {
