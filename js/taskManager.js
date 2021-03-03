@@ -69,7 +69,7 @@ class TaskManager {
       document.querySelector('#task-list').innerHTML = tasksHtml
       console.log(tasksHtmlList.length);
     }else{
-      document.querySelector('#task-list').innerHTML = '<img src="./image.svg"width ="200px">'
+      document.querySelector('#task-list').innerHTML = '<div class="d-flex justify-content-center p-5"><img src="./image.svg"width ="320px"></div>'
     }
   };
 

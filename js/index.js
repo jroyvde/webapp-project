@@ -112,7 +112,9 @@ const checkValidity = () => {
 
     // If user inputs are valid then remove dismiss-data attribute and button should work
     submitButton.removeAttribute('dismiss-data')
-
+    nameInput.value = nameInput.value.replace(/</g,'&lt;')
+    descriptionInput.value = descriptionInput.value.replace(/</g,'&lt;')
+    assignInput.value = assignInput.value.replace(/</g,'&lt;')
     firstTaskManager.addTask(
       nameInput.value,
       descriptionInput.value,
