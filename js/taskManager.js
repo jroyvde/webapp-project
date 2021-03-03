@@ -63,13 +63,15 @@ class TaskManager {
       const taskHtml = this.createTaskHtml(element.name, element.description, element.assignedTo, formattedDate, element.status, element.id)
       tasksHtmlList.push(taskHtml);
     })
-
     const tasksHtml = tasksHtmlList.join("\n")
     if(tasksHtmlList.length){
       document.querySelector('#task-list').innerHTML = tasksHtml
       console.log(tasksHtmlList.length);
     }else{
+  
       document.querySelector('#task-list').innerHTML = '<div class="d-flex justify-content-center p-5"><img src="./image.svg"width ="320px"></div>'
+      document.querySelector('#btnDiv').innerHTML = '<span id="arrow" class="btn"><i class="fa fa-arrow-left" style="font-size:40px;"></i></span>'
+
     }
   };
 
@@ -134,5 +136,13 @@ class TaskManager {
 
 };
 
-
+// $(document).ready(function() {
+//   $('#addTaskBtn').tooltip('show');
+//   $('#addTaskBtn').on('mouseleave',()=>{
+//     $('#addTaskBtn').tooltip('show');
+//   });
+//   $('body').on('click',()=>{
+//     $('#addTaskBtn').tooltip('show');
+//   });
+// })
 module.exports = TaskManager

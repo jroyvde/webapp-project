@@ -25,8 +25,19 @@ const dueDateInput = document.querySelector('#dueDate');
 const statusInput = document.querySelector("#status");
 const cancel = document.querySelector('#cancel')
 
+
+
+const arrow = document.querySelector('#btnDiv')
+
+//Declare variable for start button
+const start = document.querySelector('#start-btn')
+
 // Declare variable for Submit Button
 const submitButton = document.querySelector("#submit")
+
+start.addEventListener('click',()=>{
+  arrow.classList.add("d-none")
+})
 
 // Function to check Name is longer than 5
 const checkNameInput = () => {
