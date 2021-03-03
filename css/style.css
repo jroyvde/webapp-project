@@ -51,3 +51,6 @@ input.date {
 .col-form-label{
   text-align: right;
 }
+.task{
+  width: 40px;
+}
