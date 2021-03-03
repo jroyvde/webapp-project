@@ -70,7 +70,7 @@ class TaskManager {
     }else{
   
       document.querySelector('#task-list').innerHTML = '<div class="d-flex justify-content-center p-5"><img src="./image.svg"width ="320px"></div>'
-      document.querySelector('#btnDiv').innerHTML = '<span id="arrow" class="btn"><i class="fa fa-arrow-left" style="font-size:40px;"></i></span>'
+      document.querySelector('#btnDiv').innerHTML = '<span id="arrow" class="btn"><i class="fa fa-arrow-left mt-3" style="font-size:20px;"></i></span>'
 
     }
   };
