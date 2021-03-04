@@ -211,12 +211,19 @@ taskList.addEventListener('click', (event) => {
     firstTaskManager.save();
     firstTaskManager.render();
   }
+  
 
+  
+        
+   
   if(event.target.classList.contains('delete-button')){
     const parentTask =
       event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
       const taskId = Number(parentTask.dataset.taskId);
-     firstTaskManager.deleteTask(taskId);
+      var x = confirm("Are you sure you want to delete?");
+      if (x ){
+        firstTaskManager.deleteTask(taskId);
+      }
      firstTaskManager.save()
      firstTaskManager.render()
   }
