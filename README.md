@@ -2,38 +2,34 @@
 
 ![Task App GIF](https://res.cloudinary.com/dqanv8tij/image/upload/v1614721291/task-app-mock_lflr3s.gif)
 
-[Web Task App](https://jroyvde.github.io/webapp-project/)
+[Click here to see the deployed app.](https://jroyvde.github.io/webapp-project/)
 
-This is a Task Planner CRUD (Create, Read, Update, Delete) project application made by a group of [contributors](https://github.com/jroyvde/webapp-project/graphs/contributors) in the Generations Australia course for Junior Web Developer
+This is a Task Planner CRUD (Create, Read, Update, Delete) application project made by a group of [contributors](https://github.com/jroyvde/webapp-project/graphs/contributors) in the Generation Australia Junior Web Developer bootcamp course.
 
 [![GitHub issues](https://img.shields.io/github/issues/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/issues) [![GitHub forks](https://img.shields.io/github/forks/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/network) [![GitHub stars](https://img.shields.io/github/stars/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/stargazers) [![GitHub license](https://img.shields.io/github/license/jroyvde/webapp-project)](https://github.com/jroyvde/webapp-project/blob/main/LICENSE) 
 
 ## Getting Started
 
-Create a clone by forking or clicking the green button here on GitHub. Then open your terminal and paste `git clone` and the https link to have it on your local machine. Follow by using `cd` and the name of the folder to move inside of it and then use `code .` which will select all files in the folder and open them in your IDE like for example Visual Studio code. We've written a lot of comments to be able to understand our logic and how you can change parts of the code to make the task planner how you like.
+Create a clone by clicking the green 'Code' button near the top of the GitHub repository page (Optionally, you can also fork the repository). Then open your terminal and paste `git clone` along with the HTTPS link to have the app's code on your local machine. Follow by using `cd` and the name of the cloned folder to move inside of it, and then use `code .` which will select open all files in the folder in Visual Studio Code. We've written a lot of comments to make it easier to understand the application's logic, and how you can change parts of the code to make the task planner behave how you like.
 
 ### Prerequisites
 
-Coded with HTML5, CSS3, JavaScript (ECSMA5, ES6 and ES8), Bootstrap, Node.js, npm, Mocha, Chai
-
-- Terminal - we use Ubuntu
-- IDE - we use Visual Studio code
-- GitHub - an account to fork and save your repositories online
-- Install Git and Node.js on your system to use the Mocha and Chai dependencies and to send/receive files between repositories
+Install Git and Node.js on your system to send/receive files between repositories and to use the Mocha and Chai dependencies.
 
 ## Running the tests
 
-Coding tests performed with `console.log()` in the DOM and using Mocha & Chai.
+Coding tests performed with regular `console.log()`s, and using Mocha & Chai.
 
 ## Deployment
 
 To deploy our project we linked the project with GitHub pages.
+
 ## Built With
 
 * [Bootstrap](https://getbootstrap.com/) - The web framework used
 * [GitHub](https://github.com/) - Version control
-* [Ubuntu](https://ubuntu.com/wsl) - Used Ubuntu Terminal
-
+* [Ubuntu](https://ubuntu.com/wsl) - Used Ubuntu Terminal provided with WSL
+* [Visual Studio Code](https://code.visualstudio.com/) - Our IDE of choice throughout the project
 
 ## Authors
 
@@ -50,8 +46,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to Bhaumik and Aaron at Generations Australia for the help and guidance
-
+* Hat tip to Bhaumik and Aaron at Generation Australia for the help and guidance.
 
 ![Intro](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726595/1_wvz8pq.jpg)
 ![Adding Tasks](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726596/3_chkuv2.jpg)
@@ -60,7 +55,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ![Thanks](https://res.cloudinary.com/dqanv8tij/image/upload/v1614726596/6_ktajyd.jpg)
 
 ## THE END :clap:
-
-
-
-
