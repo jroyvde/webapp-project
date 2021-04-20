@@ -1,23 +1,21 @@
-body{
+body {
   background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
   background-repeat: no-repeat;
 }
 
-#arrow{
+#arrow {
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
 }
-#arrow{
-  -webkit-animation: mover 1s infinite  alternate;
-  animation: mover 1s infinite  alternate;
-}
+
 @-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
 }
+
 @keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
 }
 
 input.date {
@@ -27,9 +25,12 @@ input.date {
 .fa-plus {
   color:#9890e3;
 }
+
 .fa-arrow-left{
-  color:#9890e3;
+  color:#3abca7;
   font-size: 30px;
+  position: relative;
+  bottom: 8px;
 }
 
 #plusbutton {
@@ -40,17 +41,20 @@ input.date {
   width: 10em;
 }
 
-.btn{
+.btn {
   max-height: 40px;
   opacity: .9;
 }
-#submit{
+
+#submit {
   background-color: #9890e3;
   color: white;
 }
-.col-form-label{
+
+.col-form-label {
   text-align: right;
 }
-.task{
+
+.task {
   width: 40px;
 }
